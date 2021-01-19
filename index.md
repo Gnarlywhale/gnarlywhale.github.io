@@ -1,3 +1,5 @@
+<div class="row-fluid">
+<div class="span-6">
 I work at the [BLINC](https://blinclab.ca/about/) [Lab](http://www.blinclab.ca), mostly figuring out how to enable researchers to use Motion Capture and Eye Tracking tech without needing to learn how to code.
 
 ... and sometimes I get to play with the robots 🤖
@@ -6,5 +8,8 @@ I work at the [BLINC](https://blinclab.ca/about/) [Lab](http://www.blinclab.ca),
 
 [Twitter](https://twitter.com/Gnarlywhale)
 [Github](https://github.com/Gnarlywhale)
-
+</div>
+<div class="span-6">
 ![https://media.giphy.com/media/lnUO82sqfyOxi8i32q/giphy.gif](https://media.giphy.com/media/lnUO82sqfyOxi8i32q/giphy.gif)
+</div>
+</div>
