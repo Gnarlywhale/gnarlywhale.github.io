@@ -3,10 +3,23 @@ height: calc(100vh - 30px);
 overflow: hidden;
 position: relative;
 }
+.super{
+    font-size:calc(2rem * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio));
+}
+footer a, footer a:visited{
+    color:#83ff98;
+}
+a, a:visited, a:link{
+    color:#83ff98
+}
+
+.navLinks{
+    font-size:1.5em;
+}
 
 .feather {
-    width: 1em;
-    height: 1em;
+    width: 1.5em;
+    height: 1.5em;
     stroke: currentColor;
     stroke-width: 2;
     stroke-linecap: round;
