@@ -6,12 +6,11 @@ height: calc(100vh - 70px);
     font-size:calc(2rem * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio));
 }
 
-@media screen and (min-width: 600px) {
+
     .hideBig{
 
         display: none;
     }
-  }
 @media screen and (max-width: 600px) {
     .hero {
         color: black
