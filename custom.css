@@ -6,10 +6,29 @@ height: calc(100vh - 70px);
     font-size:calc(2rem * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio));
 }
 
+@media screen and (min-width: 600px) {
+    .hideBig{
+
+        display: none;
+    }
+  }
 @media screen and (max-width: 600px) {
+    .hero {
+        color: black
+    }
     .super {
       font-size: calc(1rem * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio) * var(--heading-ratio));
     }
+    #description {
+        position: absolute;
+        top: 10vh;
+    }
+    .hideSmall {
+        display:none;
+    }
+    #logo-body{
+        height: calc(100vh - 30px);
+        }
   }
 footer a, footer a:visited{
     color:#83ff98;
@@ -34,12 +53,7 @@ a, a:visited, a:link{
     stroke-linejoin: round;
     fill: none;
   }
-  @media screen and (max-width: 600px) {
-    #description {
-        position: absolute;
-        top: 10vh;
-    }
-  }
+ 
 
 
 ::-webkit-scrollbar {
