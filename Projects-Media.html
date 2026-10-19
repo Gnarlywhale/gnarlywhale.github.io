@@ -18,7 +18,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
+
     gtag('config', 'G-SCFPCS1J05');
   </script>
 </head>
@@ -34,9 +34,9 @@
         <div class="row">
           <div class="card fluid">
             <h2 class="section">Shot Coach - ZerOne Hockeyology</h2>
-            <p>Created a golf swing-esque motion analyzer, built specifically for hockey slap shots. I worked with professional shot coaches and built the pipeline around the Orbbec Femto Bolt depth camera with the Azure Kinect Body Tracking SDK.</p>
-            <p>The pipeline consists of a recording system that handles the initial capture and body landmark detection, and a dockerized web application for facilitating the analysis and generating the summary pdf report.</p>
-            <p>The platform deployed within the facility in April 2026, and has facilitated hundreds of sessions within the first year.</p>
+            <p>Created a golf swing-esque motion analyzer, built specifically for hockey slap shots. I worked with professional shot coaches to design the metrics and benchmarks, and built the pipeline around the Orbbec Femto Bolt depth camera with the Azure Kinect Body Tracking SDK.</p>
+            <p>The pipeline consists of a recording system that handles the initial capture and body landmark detection, and a dockerized web application that breaks each shot into phases, scores the movement, and generates a summary PDF report.</p>
+            <p>The platform launched at the facility in April 2026 and ran 349 assessments in its first six months. I ran the first two months of sessions myself, then trained six staff to run the whole pipeline on their own.</p>
             <div class="media-frame">
               <video class="project-video" controls muted autoplay loop playsinline preload="metadata">
                 <source src="videos/shot-coach.mp4" type="video/mp4">
@@ -47,8 +47,8 @@
 
         <div class="row">
           <div class="card fluid">
-            <h2 class="section">Norquest College - 3D Printing and Robotics Camp</h2>
-            <p>Designed and facilitated a one-week 3D Printing and Robotics Camp for junior high students. We had one camp in 2025, two in 2026, and the college is planning to expand the program moving forward.</p>
+            <h2 class="section">NorQuest College - 3D Printing and Robotics Camp</h2>
+            <p>Designed and facilitated a one-week 3D Printing and Robotics Camp for junior high students. We had one camp in 2025, two in 2026, and the college is planning to expand the program moving forward. Both of the instructors I worked with are coming back for more.</p>
             <p><a href="https://www.ctvnews.ca/edmonton/article/robotics-camp-teaches-young-students-elements-of-design-construction/">Robotics camp teaches young students elements of design, construction - CTV News</a></p>
             <img class="project-image" src="photos/roboCamp.png" alt="Robotics camp" />
           </div>
@@ -56,22 +56,35 @@
 
         <div class="row">
           <div class="card fluid">
-            <h2 class="section">AI in Neurotech - A panel discussion</h2>
-            <p>Was delighted to participate in "<a href="https://luma.com/qpocsij9">An Interdisciplinary Panel on AI-Enabled Neurotechnology: Perspectives from Medicine, Academia, and Industry</a>", a community session of <a href="https://www.upperbound.ai/">Amii's 2024 Upper Bound Conference</a>.</p>
-            <p>Huge thank you to NeurAlberta Tech for hosting and the invite!</p>
-            <img class="project-image" src="photos/nat-panel.jpg" alt="Network of Applied Tech Panel Event" />
+            <h2 class="section">GaMA - Gaze and Movement Assessment</h2>
+            <p>Led the development of GaMA, a platform that turns raw motion capture and eye tracking recordings into analysis-ready data about how people move and where they look. Before GaMA, gaze data was labelled by hand and motion analysis was mostly limited to single joint angles.</p>
+            <p>GaMA started as part of a DARPA-funded prosthetics project at the <a href="https://blinclab.ca/">BLINC Lab</a>. It's since been used by research teams at the University of Alberta, the University of Auckland, and Shirley Ryan AbilityLab, has supported at least seven peer-reviewed studies, and is now the backbone of the company I co-founded.</p>
+            <p><a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2749780">Quantitative Eye Gaze and Movement Differences in Visuomotor Adaptations to Varying Task Demands Among Upper-Extremity Prosthesis Users - JAMA Network Open</a></p>
+            <p><a href="https://doi.org/10.1371/journal.pone.0219333">Gaze and Movement Assessment (GaMA): Inter-site validation of a visuomotor upper limb functional protocol - PLoS ONE</a></p>
+            <img class="project-image" src="photos/giphy.gif" alt="GaMA demonstration" />
           </div>
         </div>
 
         <div class="row">
           <div class="card fluid">
-            <h2 class="section">MEng Capstone - "Laying The Foundations for Real-Time Auto-Segmentation of Time Series Gaze and Movement
-Data"</h2>
-            <p>Opted to tackle a neeeeedlessly large project as my MEng Capstone.</p>
-            <p>Breaking down complex, multi-action movements into descrete motions is one of the most arduous challenges with analyzing motion capture data. As part of </p>
-            <img class="project-image" src="photos/nat-panel.jpg" alt="Network of Applied Tech Panel Event" />
+            <h2 class="section">AI in Neurotech - A panel discussion</h2>
+            <p>Was delighted to participate in "<a href="https://luma.com/qpocsij9">An Interdisciplinary Panel on AI-Enabled Neurotechnology: Perspectives from Medicine, Academia, and Industry</a>", a community session of <a href="https://www.upperbound.ai/">Amii's 2024 Upper Bound Conference</a>.</p>
+            <p>Huge thank you to NeurAlberta Tech (now Network for Applied Technology) for hosting and the invite!</p>
+            <img class="project-image" src="photos/nat-panel.jpg" alt="NeurAlberta Tech panel at Upper Bound 2024" />
           </div>
         </div>
+
+        <div class="row">
+          <div class="card fluid">
+            <h2 class="section">MEng Capstone - Auto-Segmenting Motion Capture Data</h2>
+            <p>Opted to tackle a neeeeedlessly large project as my MEng Capstone.</p>
+            <p>Breaking down complex, multi-action movements into discrete motions is one of the most arduous parts of analyzing motion capture data. GaMA does it with hand-built rulesets, which take expertise and a lot of iteration to get right. I wanted to see if machine learning could learn the segmentation from labelled examples instead.</p>
+            <p>Using 1,371 labelled trials collected across four sites, I benchmarked LSTMs against simpler MLP baselines in JAX. The best LSTM hit 93% frame-level accuracy, but the MLPs came surprisingly close, which suggests the problem depends far less on history than expected. Gradient-boosted trees are the natural next experiment.</p>
+            <p><a href="capstone-report.pdf">Laying The Foundations for Real-Time Auto-Segmentation of Time Series Gaze and Movement Data (PDF)</a></p>
+            <img class="project-image" src="photos/capstone-segmentation.png" alt="True vs predicted movement phases for the best, median, and worst test trials" />
+          </div>
+        </div>
+
         <div class="row">
           <div class="card fluid">
             <h2 class="section">Frick I Love Nature</h2>
@@ -83,10 +96,22 @@ Data"</h2>
 
         <div class="row">
           <div class="card fluid">
-            <h2 class="section">HumanMachine</h2>
-            <p>Created and operated the Nao Robot control interface used for an AI-powered improv show in the 2018 Edmonton Fringe festival. Performed alongside <a href="https://korymathewson.com/">Kory Mathewson</a> + <a href="https://piotrmirowski.com/">Piotr Mirowski</a>.</p>
-            <p><a href="https://globalnews.ca/news/4496850/artificial-intelligence-edmonton-fringe-festival-robot/">Artificial intelligence put to the test during Edmonton Fringe Festival show - Global News</a></p>
-            <img class="project-image" src="photos/improboticsb.jpg" alt="HumanMachine" />
+            <h2 class="section">Axis Reloaded</h2>
+            <div class="row axis-row">
+              <div class="col-sm-8 axis-copy">
+                <p>Worked with <a href="https://ericdavidwells.com">Eric Wells</a> and <a href="https://github.com/MarkSherstan">Mark Sherstan</a> to design, construct, and program a robotic kinetic sculpture as a hardware demo for the University of Alberta Faculty of Engineering.</p>
+                <p>The "claw" uses machine vision (a webcam in the palm) to track deviations in the rotating plate and trigger a re-center. The whole device is self-contained and autonomous, using a Raspberry Pi for trajectory calculation and device control. This project was additionally demoed at the January 2020 edition of Telus World of Science's Dark Matters.</p>
+                <p><a href="https://ericdavidwells.com/projects/axis/">Axis Reloaded - Eric Wells</a></p>
+              </div>
+              <div class="col-sm-1 axis-spacer"></div>
+              <div class="col-sm-3 axis-media-col">
+                <div class="media-frame axis-media-frame">
+                  <video class="project-video axis-video" controls muted autoplay loop playsinline preload="metadata" width="640" height="360">
+                    <source src="videos/Axis.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -110,22 +135,11 @@ Data"</h2>
 
         <div class="row">
           <div class="card fluid">
-            <h2 class="section">Axis Reloaded</h2>
-            <div class="row axis-row">
-              <div class="col-sm-8 axis-copy">
-                <p>Worked with <a href="https://ericdavidwells.com">Eric Wells</a> and <a href="https://github.com/MarkSherstan">Mark Sherstan</a> to design, construct, and program a robotic kinetic sculpture as a hardware demo for the University of Alberta Faculty of Engineering.</p>
-                <p>The "claw" uses a machine vision (webcam in the palm) to track deviations in the rotating plate, to trigger a re-center. The whole device is self-contained and autonomous, using a Raspberry Pi for trajectory calculation and device control. This project was additionally demoed at the January 2020 edition of Telus World of Science's Dark Matters.</p>
-                <p><a href="https://ericdavidwells.com/projects/axis/">Axis Reloaded - Eric Wells</a></p>
-              </div>
-              <div class="col-sm-1 axis-spacer"></div>
-              <div class="col-sm-3 axis-media-col">
-                <div class="media-frame axis-media-frame">
-                  <video class="project-video axis-video" controls muted autoplay loop playsinline preload="metadata" width="640" height="360">
-                    <source src="videos/Axis.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-            </div>
+            <h2 class="section">HumanMachine</h2>
+            <p>Created and operated the Nao Robot control interface used for an AI-powered improv show in the 2018 Edmonton Fringe festival. Performed alongside <a href="https://korymathewson.com/">Kory Mathewson</a> + <a href="https://piotrmirowski.com/">Piotr Mirowski</a>.</p>
+            <p><a href="https://globalnews.ca/news/4496850/artificial-intelligence-edmonton-fringe-festival-robot/">Artificial intelligence put to the test during Edmonton Fringe Festival show - Global News</a></p>
+            <!-- TODO: credit the photo's source here, or swap in one of your own -->
+            <img class="project-image" src="photos/improboticsb.jpg" alt="HumanMachine" />
           </div>
         </div>
 
@@ -136,7 +150,6 @@ Data"</h2>
               <div class="col-sm-8">
                 <p>One of my friends ran in the federal election a number of years ago, and we were curious which areas of the riding we should focus on. I pulled historic voting data and created an interactive map to show where support was growing and most concentrated.</p>
                 <p>While they didn't win, my buddy ended up doing better than a previous candidate for their party in that riding, which is pretty neat.</p>
-                <div class="col-sm-1"></div>
                 <p><a href="/RBVoteMap.html">You can check out the interactive version here.</a> (not optimized for mobile screens, like at all)</p>
               </div>
             </div>
