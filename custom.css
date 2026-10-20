@@ -30,6 +30,10 @@ object {
   height: auto;
 }
 
+#gif-body img {
+  max-height: 620px;
+}
+
 .hideBig .row {
   display: flex;
   justify-content: center;
