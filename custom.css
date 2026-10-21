@@ -30,7 +30,9 @@ object {
   height: auto;
 }
 
-#gif-body img {
+#gif-body {
+  width: auto;
+  max-width: 100%;
   max-height: 620px;
 }
 
